@@ -1,13 +1,13 @@
 {
   "name": "Zoominous",
   "version": "0.0.1",
-  "description": "Zoominous mobile image viewer",
+  "description": "Full-screen mobile image viewer",
   "main": "zoominous.js",
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:johnmcneilstudio/juniper_mobile_site.git"
+    "url": "https://github.com/andrewdollard/zoominous"
   },
-  "author": "Andrew Dollard (andrewdollard@gmail.com)",
+  "author": "Andrew Dollard <andrewdollard@gmail.com>",
   "readmeFilename": "README.md",
   "devDependencies": {
     "grunt": "~0.4.1",

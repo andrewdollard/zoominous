@@ -31,9 +31,10 @@ module.exports = function(grunt) {
 
     uglify: {
       options: {
-        banner: "/* <%= pkg.description %> - v<%= pkg.version %>\n" +
-                "   <%= pkg.author %>\n" +
-                "   Built on: <%= grunt.template.today(\"yyyy-mm-dd\") %> */\n"
+        banner: "/* <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today(\"yyyy-mm-dd\") %>\n" +
+                " * <%= pkg.description %>\n" +
+                " * <%= pkg.repository.url %>\n" +
+                " * <%= pkg.author %>  */\n"
       },
       deploy: {
         files: {
