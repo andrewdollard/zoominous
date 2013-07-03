@@ -1,4 +1,4 @@
-.zoominous-mask {
+.zoominous-fullscreen {
   z-index: 997;
   overflow: hidden;
   display: none;
@@ -10,7 +10,7 @@
   background: black url(/loading-spinner.gif) no-repeat center;
 }
 
-.zoominous-mask img {
+.zoominous-fullscreen img {
   z-index: 998;
   position: absolute;
   max-width: none;
