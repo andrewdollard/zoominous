@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Zoominous Demo</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="../zoominous.css">
+    <style type="text/css">
+    body {
+      max-width: 100%;
+      padding-top: 10%;
+      background: Wheat;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 74%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="zoominous">
+      <img src="images/kitten-small.jpg" alt="" />
+      <div class="zoominous-mask">
+        <div class="zoominous-close-wrapper">
+          <div class="zoominous-close">Close</div>
+        </div>
+        <img data-src="images/kitten-small.jpg" alt="" />
+      </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.5/hammer.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/2.1.0/jquery.imagesloaded.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js"></script>
+
+    <script src="../zoominous.js"></script>
+  </body>
+</html>
