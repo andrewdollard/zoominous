@@ -4,13 +4,19 @@
 
   "use strict";
 
-  $.fn.zoominous = function(){
+  $.fn.zoominous = function(options){
+
+    var defaults = {
+      namespace: "zoominous"
+    }
+    var settings = $.extend(defaults, options)
+
     return this.each(function(){
 
       var $this = $(this),
-          $fullscreenView = $this.find('.zoominous-mask'),
+          $fullscreenView = $this.find('.' + settings.namespace + '-fullscreen'),
           $img = $fullscreenView.find('img').first(),
-          $closeButton = $fullscreenView.find('.zoominous-close-wrapper'),
+          $closeButton = $fullscreenView.find('.' + settings.namespace + '-close-wrapper'),
           active = false, scaleActive = false,
           dragStartLeft, dragStartTop,
           scaleStart, currentScale, closeTimer,
@@ -98,13 +104,13 @@
         if (imgWidth < winWidth) {
           imgLeft = (winWidth - imgWidth) / 2
         } else {
-          // If the image is beyond the left edge, 
+          // If the image is beyond the left edge,
           // and there is space to the right,
           // move the right of the image to the right of the screen
           if (imgLeft < 0 && imgRight < winWidth) {
             imgLeft = (winWidth - imgWidth)
           }
-          // If the image is beyond the right edge, 
+          // If the image is beyond the right edge,
           // and there is space to the left,
           // move the left of the image to the left of the screen
           if (imgRight > winWidth && imgLeft > 0) {
@@ -122,7 +128,7 @@
           if (imgTop < 0 && imgBottom < winHeight) {
             imgTop = (winHeight - imgHeight)
           }
-          // If the image is below the bottom of the screen, 
+          // If the image is below the bottom of the screen,
           // and there is space above it,
           // move the top of the image to the top of the screen
           if (imgBottom > winHeight && imgTop > 0) {
