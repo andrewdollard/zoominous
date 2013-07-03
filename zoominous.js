@@ -266,11 +266,4 @@
     })
   }
 
-  $(function(){
-
-    $('.zoominous').zoominous()
-
-  })
-
-
 })(jQuery)
